@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - 燃习 Ember Habit</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #FF7E05;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        h2 {
+            color: #FF7E05;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 22px;
+            border-bottom: 2px solid #FF7E05;
+            padding-bottom: 8px;
+        }
+        
+        h3 {
+            color: #666;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .language-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        
+        .language-switch button {
+            background: #FF7E05;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 14px;
+        }
+        
+        .language-switch button:hover {
+            background: #FF6A00;
+        }
+        
+        .language-switch button.active {
+            background: #333;
+        }
+        
+        .content-zh, .content-en {
+            display: none;
+        }
+        
+        .content-zh.active, .content-en.active {
+            display: block;
+        }
+        
+        .app-name {
+            font-weight: bold;
+            color: #FF7E05;
+        }
+        
+        .email {
+            color: #FF7E05;
+            text-decoration: none;
+        }
+        
+        .email:hover {
+            text-decoration: underline;
+        }
+        
+        .update-date {
+            color: #999;
+            font-size: 14px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="language-switch">
+            <button onclick="switchLanguage('zh')" id="btn-zh" class="active">中文</button>
+            <button onclick="switchLanguage('en')" id="btn-en">English</button>
+        </div>
+        
+        <!-- 中文内容 -->
+        <div class="content-zh active">
+            <h1>隐私政策</h1>
+            <p>欢迎使用<span class="app-name">燃习（Ember Habit）</span>！我们非常重视您的隐私保护。本隐私政策将帮助您了解我们如何收集、使用和保护您的个人信息。</p>
+            
+            <h2>1. 信息收集</h2>
+            <p>我们仅收集为提供服务所必需的最少信息：</p>
+            <ul>
+                <li><strong>习惯数据</strong>：您创建的习惯名称、图标、打卡记录等，这些数据仅存储在您的设备本地</li>
+                <li><strong>设置偏好</strong>：您的语言选择、振动/音效开关等应用设置</li>
+                <li><strong>设备信息</strong>：为确保应用正常运行，我们可能会收集设备型号、操作系统版本等技术信息</li>
+            </ul>
+            <p><strong>重要说明</strong>：所有个人数据均存储在您的设备本地，我们不会上传或收集您的任何个人信息到服务器。</p>
+            
+            <h2>2. 信息使用</h2>
+            <p>我们收集的信息仅用于：</p>
+            <ul>
+                <li>提供和改进习惯追踪功能</li>
+                <li>保存您的个人设置和偏好</li>
+                <li>展示统计数据和趋势分析</li>
+                <li>确保应用的稳定性和性能</li>
+            </ul>
+            
+            <h2>3. 信息共享</h2>
+            <p><strong>我们不会与任何第三方共享、出售或出租您的个人信息。</strong></p>
+            <p>所有数据都存储在您的设备上，只有您可以访问这些数据。</p>
+            
+            <h2>4. 数据安全</h2>
+            <p>我们采取合理的技术措施保护您的数据安全：</p>
+            <ul>
+                <li>使用SQLite本地数据库存储数据</li>
+                <li>数据仅在您的设备上存储和处理</li>
+                <li>不通过网络传输任何个人数据</li>
+            </ul>
+            
+            <h2>5. 广告与解锁</h2>
+            <p>作为免费用户，您可以通过观看广告来解锁额外的习惯位：</p>
+            <ul>
+                <li>广告由第三方广告平台提供</li>
+                <li>我们不会收集您的广告交互数据</li>
+                <li>您可以选择不观看广告，此时可使用基础的3个习惯位</li>
+            </ul>
+            
+            <h2>6. 儿童隐私</h2>
+            <p>我们的应用适合所有年龄段的用户。我们不专门针对13岁以下儿童收集个人信息。</p>
+            
+            <h2>7. 您的权利</h2>
+            <p>对于存储在您设备上的数据，您拥有完全的控制权：</p>
+            <ul>
+                <li>随时查看、编辑或删除您的习惯数据</li>
+                <li>清除应用数据以删除所有本地存储的信息</li>
+                <li>卸载应用以彻底删除所有数据</li>
+            </ul>
+            
+            <h2>8. 隐私政策变更</h2>
+            <p>我们可能会不时更新本隐私政策。重大变更时，我们会通过应用内通知告知您。</p>
+            
+            <h2>9. 联系我们</h2>
+            <p>如果您对本隐私政策有任何疑问或建议，请通过以下方式联系我们：</p>
+            <p>邮箱：<a href="mailto:mement_support@163.com" class="email">mement_support@163.com</a></p>
+            
+            <div class="update-date">
+                <p>最后更新日期：2026年5月25日</p>
+            </div>
+        </div>
+        
+        <!-- English Content -->
+        <div class="content-en">
+            <h1>Privacy Policy</h1>
+            <p>Welcome to <span class="app-name">Ember Habit (燃习)</span>! We take your privacy very seriously. This Privacy Policy will help you understand how we collect, use, and protect your personal information.</p>
+            
+            <h2>1. Information Collection</h2>
+            <p>We only collect the minimum information necessary to provide our services:</p>
+            <ul>
+                <li><strong>Habit Data</strong>: Habit names, icons, check-in records you create, all stored locally on your device</li>
+                <li><strong>Settings Preferences</strong>: Your language selection, vibration/sound toggle settings</li>
+                <li><strong>Device Information</strong>: Device model, OS version and other technical information to ensure proper app functionality</li>
+            </ul>
+            <p><strong>Important Note</strong>: All personal data is stored locally on your device. We do not upload or collect any of your personal information to servers.</p>
+            
+            <h2>2. Information Use</h2>
+            <p>The information we collect is used solely for:</p>
+            <ul>
+                <li>Providing and improving habit tracking features</li>
+                <li>Saving your personal settings and preferences</li>
+                <li>Displaying statistics and trend analysis</li>
+                <li>Ensuring app stability and performance</li>
+            </ul>
+            
+            <h2>3. Information Sharing</h2>
+            <p><strong>We do not share, sell, or rent your personal information to any third parties.</strong></p>
+            <p>All data is stored on your device, and only you can access it.</p>
+            
+            <h2>4. Data Security</h2>
+            <p>We take reasonable technical measures to protect your data:</p>
+            <ul>
+                <li>Using SQLite local database for data storage</li>
+                <li>Data is only stored and processed on your device</li>
+                <li>No personal data is transmitted over the network</li>
+            </ul>
+            
+            <h2>5. Advertising & Unlocking</h2>
+            <p>As a free user, you can watch ads to unlock additional habit slots:</p>
+            <ul>
+                <li>Ads are provided by third-party advertising platforms</li>
+                <li>We do not collect your ad interaction data</li>
+                <li>You can choose not to watch ads and use the basic 3 habit slots</li>
+            </ul>
+            
+            <h2>6. Children's Privacy</h2>
+            <p>Our app is suitable for users of all ages. We do not specifically collect personal information from children under 13.</p>
+            
+            <h2>7. Your Rights</h2>
+            <p>You have complete control over data stored on your device:</p>
+            <ul>
+                <li>View, edit, or delete your habit data at any time</li>
+                <li>Clear app data to delete all locally stored information</li>
+                <li>Uninstall the app to completely remove all data</li>
+            </ul>
+            
+            <h2>8. Changes to Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time. For significant changes, we will notify you through in-app notifications.</p>
+            
+            <h2>9. Contact Us</h2>
+            <p>If you have any questions or suggestions about this Privacy Policy, please contact us at:</p>
+            <p>Email: <a href="mailto:mement_support@163.com" class="email">mement_support@163.com</a></p>
+            
+            <div class="update-date">
+                <p>Last Updated: May 25, 2026</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function switchLanguage(lang) {
+            // Hide all content
+            document.querySelectorAll('.content-zh, .content-en').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.language-switch button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected language
+            if (lang === 'zh') {
+                document.querySelector('.content-zh').classList.add('active');
+                document.getElementById('btn-zh').classList.add('active');
+                document.documentElement.lang = 'zh-CN';
+            } else {
+                document.querySelector('.content-en').classList.add('active');
+                document.getElementById('btn-en').classList.add('active');
+                document.documentElement.lang = 'en';
+            }
+        }
+        
+        // Detect browser language
+        window.onload = function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            if (userLang.startsWith('zh')) {
+                switchLanguage('zh');
+            } else {
+                switchLanguage('en');
+            }
+        };
+    </script>
+</body>
+</html>
