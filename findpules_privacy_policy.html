@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FindPulse 隐私政策 · Privacy Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #0A0A0F;
+            color: #E8E8E8;
+            line-height: 1.7;
+            padding: 24px 16px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 820px;
+            width: 100%;
+            background: #12121E;
+            border-radius: 24px;
+            padding: 32px 28px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            position: relative;
+        }
+
+        /* 语言切换按钮 */
+        .lang-switch {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+            margin-bottom: 28px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #8A8A8A;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .lang-btn.active {
+            background: #00D4FF;
+            border-color: #00D4FF;
+            color: #0A0A0F;
+        }
+
+        .lang-btn:hover:not(.active) {
+            border-color: rgba(255, 255, 255, 0.4);
+            color: #FFFFFF;
+        }
+
+        /* 内容区块 */
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        /* 排版 */
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 4px;
+            letter-spacing: -0.3px;
+        }
+
+        .subtitle {
+            color: #8A8A8A;
+            font-size: 14px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #00D4FF;
+            margin: 28px 0 10px 0;
+        }
+
+        p {
+            color: #D0D0D0;
+            margin-bottom: 14px;
+            font-size: 15px;
+        }
+
+        ul {
+            margin: 8px 0 16px 24px;
+            color: #D0D0D0;
+            font-size: 15px;
+        }
+
+        ul li {
+            margin-bottom: 6px;
+        }
+
+        .highlight-box {
+            background: rgba(0, 212, 255, 0.06);
+            border-left: 3px solid #00D4FF;
+            padding: 14px 18px;
+            border-radius: 6px;
+            margin: 18px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: #C8C8C8;
+        }
+
+        .footer-note {
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            font-size: 13px;
+            color: #6A6A6A;
+            text-align: center;
+        }
+
+        .footer-note a {
+            color: #6A6A6A;
+            text-decoration: none;
+        }
+
+        .footer-note a:hover {
+            color: #00D4FF;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 16px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .lang-switch {
+                gap: 6px;
+            }
+
+            .lang-btn {
+                padding: 4px 14px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- 语言切换 -->
+        <div class="lang-switch">
+            <button class="lang-btn active" data-lang="zh" onclick="switchLang('zh')">中文</button>
+            <button class="lang-btn" data-lang="en" onclick="switchLang('en')">English</button>
+        </div>
+
+        <!-- ============ 中文版 ============ -->
+        <div id="lang-zh" class="lang-content active">
+
+            <h1>隐私政策</h1>
+            <div class="subtitle">最后更新：2026 年 8 月 23 日</div>
+
+            <p>FindPulse（以下简称“本应用”或“我们”）尊重并保护你的个人隐私。本隐私政策旨在说明我们如何收集、使用、存储和保护你的信息。使用本应用即表示你同意本政策的条款。</p>
+
+            <h2>1. 信息收集与使用</h2>
+            <p>本应用的核心功能（UWB 精准寻物、好友定位、防丢提醒）在<b>无网络环境</b>下仍可正常工作。我们秉承“本地优先”原则，绝大多数数据仅保存在你的设备本地，不会上传至任何云端服务器。</p>
+            <ul>
+                <li><b>设备信息</b>：设备名称、蓝牙地址、UWB 配对信息等，仅用于实现寻物与配对功能，存储在本地。</li>
+                <li><b>位置信息</b>：仅在你主动使用 AR 宝藏埋藏、空间打卡、智能场景等功能时，会获取你的 GPS 位置。位置数据仅用于功能实现，不会持续追踪。</li>
+                <li><b>社交数据</b>：好友关系、拍一拍记录、互动数据等，仅在本地存储，不会上传。</li>
+                <li><b>云端同步</b>：AR 宝藏数据通过 Firebase Cloud Firestore 进行加密传输与存储，仅在你主动埋藏宝藏或寻找宝藏时同步，且仅你和你授权的好友可见。</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>🔒 本地优先 · 隐私守护</strong> — 你的设备列表、寻物记录、好友关系等核心数据默认仅存储在本地，不上传任何云端服务器。AR 宝藏数据仅在你主动使用时才会同步至 Firebase。</p>
+            </div>
+
+            <h2>2. 权限说明</h2>
+            <p>为确保核心功能正常运行，本应用需要以下权限。所有权限均遵循最小化原则，你可随时在系统设置中撤回。</p>
+            <ul>
+                <li><b>蓝牙</b>：连接 UWB/BLE 寻物标签，实现精准测距。</li>
+                <li><b>位置</b>：用于 AR 宝藏埋藏、空间打卡、智能场景触发的地理定位。</li>
+                <li><b>通知</b>：用于防丢提醒、好友互动等消息推送。</li>
+                <li><b>相机</b>：用于扫描打卡二维码（可选）。</li>
+            </ul>
+
+            <h2>3. 数据存储与安全</h2>
+            <ul>
+                <li><b>本地存储</b>：设备列表、寻物记录、好友关系、拍一拍记录、成就数据等，均使用 SQLite 存储在设备本地。</li>
+                <li><b>云端存储</b>：AR 宝藏数据（宝藏名称、内容、位置、发现状态）通过 Firebase Cloud Firestore 存储，采用行业标准加密传输。</li>
+                <li><b>数据保留</b>：本地数据随应用卸载而删除。云端数据可在应用内或通过联系我们申请删除。</li>
+            </ul>
+
+            <h2>4. 用户权利</h2>
+            <p>你对自己的数据享有完全控制权：</p>
+            <ul>
+                <li><b>查阅权</b>：可在「我的」页面查看所有本地与云端数据。</li>
+                <li><b>删除权</b>：可随时删除设备、好友、宝藏等数据，删除后不可恢复。</li>
+                <li><b>账户注销权</b>：可申请注销账户，注销后云端数据将在 30 天内清除。</li>
+                <li><b>数据导出权</b>：可导出你的个人数据副本。</li>
+            </ul>
+
+            <h2>5. 儿童隐私</h2>
+            <p>本应用不针对 13 岁以下儿童提供服务。我们不会故意收集儿童的个人信息。如发现儿童信息被收集，请及时联系我们删除。</p>
+
+            <h2>6. 政策更新</h2>
+            <p>我们可能会不定期更新本隐私政策。更新后的版本将在本页面发布，并更新“最后更新”日期。建议你定期查看。</p>
+
+            <h2>7. 联系我们</h2>
+            <p>如你对本隐私政策有任何疑问、建议或投诉，可通过以下方式联系我们：</p>
+            <ul>
+                <li><b>邮箱</b>：<a href="mailto:mement_support@163.com" style="color:#00D4FF;text-decoration:none;">mement_support@163.com</a></li>
+                <li><b>反馈入口</b>：App 内「我的 → 关于 → 版本信息」</li>
+            </ul>
+            <p>我们将在收到反馈后 7 个工作日内予以回复。</p>
+
+            <div class="footer-note">
+                &copy; 2026 FindPulse · 本地优先，隐私守护
+            </div>
+
+        </div>
+
+        <!-- ============ English Version ============ -->
+        <div id="lang-en" class="lang-content">
+
+            <h1>Privacy Policy</h1>
+            <div class="subtitle">Last Updated: August 23, 2026</div>
+
+            <p>FindPulse (the "App" or "We") respects and protects your privacy. This Privacy Policy explains how we collect, use, store, and protect your information. By using the App, you agree to the terms of this policy.</p>
+
+            <h2>1. Information Collection and Use</h2>
+            <p>The core features of the App (UWB precision finding, friend location, anti-loss alerts) work <b>without an internet connection</b>. We follow a "local-first" principle — most data stays on your device and is not uploaded to any cloud server.</p>
+            <ul>
+                <li><b>Device Information</b>: Device name, Bluetooth address, UWB pairing data — stored locally for finding and pairing purposes.</li>
+                <li><b>Location Data</b>: Only accessed when you actively use AR treasure burying, spatial check-ins, or smart scene features. Location is used solely for feature functionality and is not continuously tracked.</li>
+                <li><b>Social Data</b>: Friend relationships, poke records, and interaction data are stored locally and never uploaded.</li>
+                <li><b>Cloud Sync</b>: AR treasure data is encrypted and stored via Firebase Cloud Firestore — only synced when you actively bury or look for treasures, and only visible to you and your authorized friends.</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>🔒 Local-First · Privacy Protected</strong> — Your device list, finding records, and friend relationships are stored locally by default and never uploaded to any cloud server. AR treasure data is only synced to Firebase when you actively use treasure features.</p>
+            </div>
+
+            <h2>2. Permissions</h2>
+            <p>The App requires the following permissions to ensure core functionality. All permissions follow the principle of minimization and can be revoked anytime in System Settings.</p>
+            <ul>
+                <li><b>Bluetooth</b>: Connects to UWB/BLE finding tags for precise ranging.</li>
+                <li><b>Location</b>: Used for AR treasure burying, spatial check-ins, and smart scene triggers.</li>
+                <li><b>Notifications</b>: Used for anti-loss alerts, friend interactions, and push messages.</li>
+                <li><b>Camera</b>: Used for scanning check-in QR codes (optional).</li>
+            </ul>
+
+            <h2>3. Data Storage and Security</h2>
+            <ul>
+                <li><b>Local Storage</b>: Device list, finding records, friend relationships, poke records, achievement data — all stored locally using SQLite.</li>
+                <li><b>Cloud Storage</b>: AR treasure data (name, content, location, discovery status) is stored via Firebase Cloud Firestore using industry-standard encrypted transmission.</li>
+                <li><b>Data Retention</b>: Local data is deleted when the App is uninstalled. Cloud data can be deleted in the App or by contacting us.</li>
+            </ul>
+
+            <h2>4. Your Rights</h2>
+            <p>You have full control over your data:</p>
+            <ul>
+                <li><b>Right to Access</b>: View all local and cloud data on the "Profile" page.</li>
+                <li><b>Right to Deletion</b>: Delete devices, friends, treasures, etc. anytime. Deletion is irreversible.</li>
+                <li><b>Right to Account Deletion</b>: Request account deletion; cloud data will be cleared within 30 days.</li>
+                <li><b>Right to Data Export</b>: Export a copy of your personal data.</li>
+            </ul>
+
+            <h2>5. Children's Privacy</h2>
+            <p>The App is not intended for children under 13. We do not knowingly collect personal information from children. If you believe a child's information has been collected, please contact us to delete it.</p>
+
+            <h2>6. Policy Updates</h2>
+            <p>We may update this Privacy Policy from time to time. The updated version will be posted on this page with the "Last Updated" date revised. We encourage you to review it periodically.</p>
+
+            <h2>7. Contact Us</h2>
+            <p>If you have any questions, suggestions, or complaints about this Privacy Policy, contact us:</p>
+            <ul>
+                <li><b>Email</b>: <a href="mailto:mement_support@163.com" style="color:#00D4FF;text-decoration:none;">mement_support@163.com</a></li>
+                <li><b>Feedback</b>: In-App Profile → About → Version</li>
+            </ul>
+            <p>We will reply within 7 business days of receiving your feedback.</p>
+
+            <div class="footer-note">
+                &copy; 2026 FindPulse · Local-First, Privacy First
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            // 切换内容
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+            document.getElementById('lang-' + lang).classList.add('active');
+
+            // 切换按钮状态
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector('.lang-btn[data-lang="' + lang + '"]').classList.add('active');
+        }
+
+        // 默认根据浏览器语言自动切换
+        (function() {
+            const browserLang = navigator.language || navigator.userLanguage || 'zh';
+            const lang = browserLang.startsWith('zh') ? 'zh' : 'en';
+            // 如果默认是英文，则切换到英文
+            if (lang === 'en') {
+                switchLang('en');
+            }
+        })();
+    </script>
+
+</body>
+</html>
