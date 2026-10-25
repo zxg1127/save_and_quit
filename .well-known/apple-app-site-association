@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["27JB9YPC66.vip.mement.trailLink"],
+        "components": [
+          {
+            "/": "/join",
+            "comment": "邀请入群落地页 / Universal Link 入口"
+          },
+          {
+            "/": "/join/*",
+            "comment": "邀请入群落地页子路径"
+          }
+        ]
+      }
+    ]
+  }
+}
