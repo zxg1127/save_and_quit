@@ -149,7 +149,7 @@
             <h1>隐私政策</h1>
             <p class="subtitle">Kivon 应用</p>
 
-            <p class="effective-date">生效 / 最后更新日期：2026年11月6日</p>
+            <p class="effective-date">生效 / 最后更新日期：2026年11月7日</p>
 
             <p>欢迎使用 Kivon。Kivon 是一款「只在本机」运行的私人片段记录与语义检索应用。本政策由 Kivon 的开发者（以下简称「我们」）提供，用于说明本应用如何处理您的信息。</p>
 
@@ -161,31 +161,31 @@
             <p><strong>我们不收集您的个人信息。</strong>使用 Kivon 无需注册或登录，我们不会要求或获取您的姓名、电子邮箱、电话号码、通讯录、精确位置、照片、设备标识符或广告标识符，也不会建立用户画像或进行跨应用追踪。</p>
             <p>以下数据<strong>仅保存在您的设备本地</strong>，我们无法访问：</p>
             <ul>
-                <li>您主动保存的文字片段及其时间戳、语言标记；</li>
+                <li>您主动保存的文字片段及其时间戳、语言标记，以及关联到单条记录的图片或文件附件（附件仅存本机，不参与文本检索、不随备份导出，详见第 5 节）；</li>
                 <li>应用内的搜索历史与常用词（用于显示建议词）；</li>
                 <li>语言、外观等偏好设置，以及本地数据库文件；</li>
                 <li>可选「应用锁」的开关状态。</li>
             </ul>
             <p><strong>关于应用锁与生物识别：</strong>如您设置密码锁，应用只在系统钥匙串（iOS Keychain / Android Keystore）中保存加盐后的 SHA-256 哈希值，<strong>不保存明文密码</strong>。Face ID / Touch ID 等解锁由操作系统提供的生物识别接口完成，我们<strong>不读取、不存储、不传输</strong>您的指纹或面容数据。</p>
             <p>应用内购买同样无需账号：我们只在设备本地记录「是否已解锁」，不接触任何支付信息（详见第 3 节）。</p>
+            <p><strong>为什么能「按意思搜到」：</strong>保存每条片段时，Kivon 会在本机自动切分词语、生成语义向量，并写入本地全文索引与向量索引。切词结果、向量与索引同样只存在于设备上的数据库中，<strong>不上传、不共享、不离开设备</strong>；删除记录时相应索引一并移除。这是本应用的核心能力，对所有用户免费开放。</p>
 
             <h2>2. 联网行为</h2>
-            <p>本应用共有两类联网行为：<strong>语义模型下载</strong>与<strong>应用内购买 / 恢复购买（StoreKit）</strong>。两者都不会上传您保存的片段、搜索词或备份文件。</p>
-            <p>为实现「按意思搜索」，Kivon 使用 multilingual-e5-small 语义模型。若该模型未随应用内置，在网络可用且您首次启用语义检索时，应用会从 Hugging Face 或其镜像站点（hf-mirror.com）下载约 470 MB 的模型文件，并缓存到设备本地。</p>
+            <p>本应用唯一的联网行为是<strong>应用内购买 / 恢复购买（StoreKit）</strong>。语义模型已随应用内置，检索全程在本机完成，<strong>无需下载、无需联网</strong>；应用不会上传您保存的片段、搜索词或备份文件。</p>
+            <p>为实现「按意思搜索」，Kivon 使用 multilingual-e5-small 语义模型，<strong>该模型已随应用内置</strong>，<strong>该能力对所有用户免费开放</strong>，与是否购买 Premium 无关。首次启动时模型会在本机完成一次装载，之后所有检索均在设备本地运行，不产生任何网络请求。</p>
             <ul>
-                <li>该请求仅用于获取公开的<strong>模型文件</strong>；请求中不会附带您保存的任何片段、搜索词、密码、备份文件或应用内标识符。</li>
-                <li>与所有普通网络请求一样，模型托管服务会按其自身政策处理建立连接所必需的技术信息（例如 IP 地址）。我们不会在该请求中附加任何应用内数据。</li>
-                <li>模型下载完成后，语义检索完全在设备本地运行，无需联网。</li>
-                <li>若下载不可用，应用会自动改用内置的离线关键词检索，保存与搜索功能照常可用。</li>
+                <li>模型文件已包含在应用安装包内，<strong>不会从 Hugging Face 或任何服务器下载</strong>。</li>
+                <li>语义检索、图片文字识别（OCR）与索引构建全部在设备本地完成，飞行模式下同样可用。</li>
+                <li>应用不会因模型或检索而向任何服务器发送片段、搜索词、密码、备份文件或应用内标识符。</li>
             </ul>
-            <p>除上述模型下载与第 3 节所述的应用内购买外，应用不会主动向任何服务器发送数据。当您通过系统分享菜单导出文件时，文件将交由您选择的目标应用处理（详见第 5 节）。</p>
+            <p>除第 3 节所述的应用内购买外，应用不会主动向任何服务器发送数据。当您通过系统分享菜单导出文件时，文件将交由您选择的目标应用处理（详见第 5 节）。</p>
 
             <h2>3. 应用内购买（Kivon Premium）</h2>
-            <p>Kivon 提供一次性买断的「Kivon Premium」（非消耗型应用内购买，产品标识 vip.mement.Retrace.pro），用于解锁无限条目与跨语言语义检索。免费版最多可创建 50 条片段，已保存的内容始终可读、可搜索、可编辑、可导出。</p>
+            <p>Kivon 提供一次性买断的「Kivon Premium」（非消耗型应用内购买，产品标识 vip.mement.Retrace.pro），<strong>唯一作用是取消免费版 50 条片段的创建上限</strong>。免费版最多可创建 50 条片段，已保存的内容始终可读、可搜索、可编辑、可导出；跨语言语义检索等全部检索能力对所有用户免费开放，无需购买。</p>
             <ul>
                 <li>查询商品价格、购买与「恢复购买」由 Apple App Store（StoreKit）处理，且仅在您打开购买页面或发起购买时联网；支付信息由 Apple 处理，我们<strong>不会接触、也不会收集</strong>您的支付卡信息、姓名或 Apple ID。</li>
-                <li>我们只在您设备的系统钥匙串中保存一个「是否已解锁」的本地标记，用于判断是否启用 Premium 功能；该标记不上传，也不与任何账号关联。</li>
-                <li>免费版使用内置的基础检索，不下载语义模型；Premium 首次启用跨语言检索时才会按需下载模型文件（见第 2 节）。</li>
+                <li>我们只在您设备的系统钥匙串中保存一个「是否已解锁」的本地标记，用于判断是否取消创建条数上限；该标记不上传，也不与任何账号关联。</li>
+                <li>是否购买 Premium 与语义模型无关：模型已随应用内置，所有用户均可直接使用，不需要下载（见第 2 节）。</li>
                 <li>这是一次性购买，不是订阅，不会自动续费或再次扣款。购买记录由 Apple 保管，换设备或重装后请使用「恢复购买」。</li>
             </ul>
 
@@ -193,28 +193,31 @@
             <ul>
                 <li><strong>读取剪贴板：</strong>仅在您明确点击「从剪贴板粘贴」时，应用才会读取剪贴板中的纯文本；不会在后台或您未操作时读取。</li>
                 <li><strong>写入剪贴板：</strong>「复制片段」由您主动触发，仅把所选文字写入系统剪贴板。</li>
-                <li><strong>分享扩展：</strong>只接收您主动从其他应用分享给 Kivon 的文本，并通过本机的 App Group 写入本地数据库，不经过我们的服务器。</li>
+                <li><strong>分享扩展：</strong>只接收您主动从其他应用分享给 Kivon 的文本、链接、图片或文件。图片与文件会在本机复制到应用的私有附件目录，仅作为对应记录的补充保存，不参与文本检索、不上传；分享数据通过本机 App Group 传递，不经过我们的服务器。分享完成后<strong>不会跳转或切换到 Kivon</strong>，您会留在原来的应用中；内容会在您下次打开 Kivon 时于本机自动入库。</li>
+                <li><strong>图片文字识别（OCR）：</strong>「提取图中文字」使用操作系统内置的文字识别能力（iOS Vision / Android ML Kit）在设备本机完成，图片<strong>不会上传</strong>，也不会发送给任何第三方。识别出的文字追加到该条记录后，会作为普通文字参与检索并随备份导出；图片本身仍不进备份。</li>
             </ul>
 
             <h2>5. 备份、导出与导入</h2>
             <ul>
                 <li><strong>加密备份：</strong>可导出 AES-256 加密的备份文件，密钥由您设置的密码派生。密码<strong>不上传、不存储</strong>，因此遗忘密码将无法恢复该备份，请自行妥善保管。</li>
                 <li><strong>明文导出：</strong>可导出可读的 JSON 文件，内容未加密，由您自行决定何时导出、如何保存。</li>
-                <li><strong>导入恢复：</strong>仅读取您主动选择的本机备份文件。</li>
+                <li><strong>导入恢复：</strong>仅读取您主动选择的本机备份文件。也可以从微信、文件 App 等应用中选择备份并「用 Kivon 打开」：系统会把文件复制到本应用沙盒内，只有在您确认导入方式后才会于本机读取／解密，导入完成后该副本会被删除，整个过程不联网。</li>
+                <li><strong>附件不包含在备份中：</strong>加密备份（.rtx）与明文导出（.json）都只包含文字片段，<strong>不包含任何图片或文件附件</strong>。备份中仅记录每条记录原有的附件数量，用于提醒您恢复后哪些内容不会回来。附件始终只留在这台设备上，除非您手动用系统分享菜单单独打开它们。导出页、导入页、设置页与详情页都会明确提示这一点。</li>
             </ul>
             <p>一旦您把上述文件通过系统分享菜单发送给其他应用、云盘或联系人，该文件即由相应服务按其自身隐私政策处理，请谨慎选择分享对象。</p>
 
             <h2>6. 第三方服务</h2>
             <ul>
                 <li><strong>Apple App Store / StoreKit：</strong>用于应用分发、更新以及一次性买断的购买与恢复（见第 3 节），遵循 Apple 自身的隐私政策。</li>
-                <li><strong>Hugging Face / hf-mirror.com：</strong>仅提供公开的语义模型文件下载（见第 2 节）。</li>
+                <li><strong>开源语义模型：</strong>multilingual-e5-small 随应用内置，仅用于本机推理；应用运行时<strong>不连接 Hugging Face 或任何模型托管服务</strong>。</li>
             </ul>
             <p>本应用<strong>不接入</strong>广告、数据分析、崩溃上报、用户行为追踪类第三方 SDK，也不包含任何广告标识符采集。</p>
 
             <h2>7. 数据的保存与删除</h2>
             <ul>
                 <li>数据只存在于您的设备，保存期限完全由您决定，我们无法远程访问、导出或删除。</li>
-                <li>您可以长按删除单条片段，或在应用内清除搜索记录。</li>
+                <li>删除的片段会进入「最近删除」回收站保留 30 天，期间可连同附件一起恢复；到期后才会连同附件文件被彻底清除。您也可以随时在回收站中手动彻底删除或清空，或在应用内清除搜索记录。</li>
+                <li><strong>版本升级：</strong>从旧版本升级时，应用会在本机完成数据结构升级与索引校验，全程不联网、不上传任何记录；升级界面会显示进度，完成后会提示历史记录已完整保留。升级过程中请保持应用开启。</li>
                 <li>卸载应用会清除应用内的片段、设置与本地数据库；系统钥匙串中的条目由操作系统管理。</li>
             </ul>
 
@@ -239,7 +242,7 @@
             <h1>Privacy Policy</h1>
             <p class="subtitle">Kivon Application</p>
 
-            <p class="effective-date">Effective / Last Updated: November 6, 2026</p>
+            <p class="effective-date">Effective / Last Updated: November 7, 2026</p>
 
             <p>Welcome to Kivon. Kivon is an on-device, private app for capturing fragments and finding them again by meaning. This policy is provided by the developer of Kivon ("we") and explains how the app handles your information.</p>
 
@@ -251,31 +254,31 @@
             <p><strong>We do not collect your personal information.</strong> Kivon requires no registration or sign-in, and we do not request or obtain your name, email address, phone number, contacts, precise location, photos, device identifiers or advertising identifiers. We do not build user profiles or track you across apps.</p>
             <p>The following data is stored <strong>only locally on your device</strong> and is inaccessible to us:</p>
             <ul>
-                <li>Text fragments you choose to save, with their timestamps and language tags;</li>
+                <li>Text fragments you choose to save, with their timestamps and language tags, plus image or file attachments linked to a fragment (attachments stay on-device only, are never indexed for text search and are never included in backups — see Section 5);</li>
                 <li>In-app search history and frequently used terms (used to show suggestion chips);</li>
                 <li>Language, appearance and other preferences, plus the local database file;</li>
                 <li>Whether the optional app lock is enabled.</li>
             </ul>
             <p><strong>App lock and biometrics:</strong> If you set a passcode, the app stores only a salted SHA-256 hash in the system keychain (iOS Keychain / Android Keystore) and <strong>never stores the passcode in plain text</strong>. Face ID / Touch ID unlocking is performed by the operating system's biometric API; we <strong>do not read, store or transmit</strong> your fingerprint or face data.</p>
             <p>In-app purchases also require no account: we only keep a local "unlocked" flag on the device and never handle payment information (see Section 3).</p>
+            <p><strong>How "search by meaning" works:</strong> whenever you save a note, Kivon splits the text into terms, generates a semantic vector and writes both into a local full-text and vector index. Those terms, vectors and indexes also live only in the on-device database - they are <strong>never uploaded, shared or sent off the device</strong> and are removed when the note is deleted. This is the app's core capability and is free for every user.</p>
 
             <h2>2. Network Activity</h2>
-            <p>The app has two kinds of network activity: <strong>the semantic model download</strong> and <strong>in-app purchases / Restore Purchases via StoreKit</strong>. Neither uploads your saved fragments, search terms or backup files.</p>
-            <p>To enable "search by meaning", Kivon uses the multilingual-e5-small semantic model. If the model is not bundled with the app, the first time you enable semantic search - when a network connection is available - the app downloads an approximately 470 MB model file from Hugging Face or its mirror site (hf-mirror.com) and caches it locally on your device.</p>
+            <p>The app has only one kind of network activity: <strong>in-app purchases / Restore Purchases via StoreKit</strong>. The semantic model is bundled inside the app and all search runs on-device - <strong>no download and no internet connection are needed</strong>. Your saved fragments, search terms and backup files are never uploaded.</p>
+            <p>To enable "search by meaning", Kivon uses the multilingual-e5-small semantic model, <strong>which is bundled inside the app</strong>. <strong>This capability is free for every user</strong> and is not linked to the Premium purchase. The model is assembled locally once on first launch; afterwards all search runs entirely on your device and produces no network requests.</p>
             <ul>
-                <li>The request is used solely to fetch a public <strong>model file</strong>. It does not include any of your saved fragments, search terms, passcodes, backup files or in-app identifiers.</li>
-                <li>As with any ordinary network request, the model hosting service handles the technical information required to establish the connection (such as an IP address) under its own policy. We attach no in-app data to that request.</li>
-                <li>Once downloaded, semantic search runs entirely on your device with no connection required.</li>
-                <li>If the download is unavailable, the app automatically falls back to its built-in offline keyword search; saving and searching keep working.</li>
+                <li>The model file is included in the app package and is <strong>never downloaded from Hugging Face or any server</strong>.</li>
+                <li>Semantic search, on-device OCR and index building all run locally and work in airplane mode.</li>
+                <li>The app sends no fragments, search terms, passcodes, backup files or in-app identifiers to any server for model or search purposes.</li>
             </ul>
-            <p>Apart from this model download and the in-app purchase described in Section 3, the app does not proactively send data to any server. When you export a file through the system share sheet, that file is handled by the destination app you choose (see Section 5).</p>
+            <p>Apart from the in-app purchase described in Section 3, the app does not proactively send data to any server. When you export a file through the system share sheet, that file is handled by the destination app you choose (see Section 5).</p>
 
             <h2>3. In-App Purchase (Kivon Premium)</h2>
-            <p>Kivon offers a one-time, non-consumable in-app purchase ("Kivon Premium", product ID vip.mement.Retrace.pro) that unlocks unlimited fragments and cross-language semantic search. The free version can create up to 50 fragments, but everything already saved remains readable, searchable, editable and exportable.</p>
+            <p>Kivon offers a one-time, non-consumable in-app purchase ("Kivon Premium", product ID vip.mement.Retrace.pro) whose <strong>only benefit is removing the 50-fragment creation limit</strong>. The free version can create up to 50 fragments, but everything already saved remains readable, searchable, editable and exportable. All search capabilities, including cross-language semantic search, are free for every user and never require a purchase.</p>
             <ul>
                 <li>Looking up the price, purchasing and "Restore Purchases" are handled by the Apple App Store (StoreKit) and connect to the network only when you open the purchase screen or start a purchase. Payment details are processed by Apple; we <strong>never receive or collect</strong> your payment card information, name or Apple ID.</li>
-                <li>We store only a local "unlocked" flag in your device's system keychain to decide whether Premium features are enabled. It is never uploaded and is not linked to any account.</li>
-                <li>The free version uses the built-in basic search and never downloads the semantic model; the model is downloaded on demand only after Premium enables cross-language search (see Section 2).</li>
+                <li>We store only a local "unlocked" flag in your device's system keychain to decide whether the unlimited-fragment benefit applies. It is never uploaded and is not linked to any account.</li>
+                <li>The Premium purchase does not control the semantic model: it is bundled with the app and available to every user with no download (see Section 2).</li>
                 <li>This is a one-time purchase, not a subscription: there is no auto-renewal and no recurring charge. Apple keeps the purchase record; use "Restore Purchases" after switching devices or reinstalling.</li>
             </ul>
 
@@ -283,28 +286,31 @@
             <ul>
                 <li><strong>Reading the clipboard:</strong> The app reads plain text from the clipboard only when you explicitly tap "Paste from clipboard". It never reads the clipboard in the background or without your action.</li>
                 <li><strong>Writing to the clipboard:</strong> "Copy fragment" is an action you trigger; it only places the selected text on the system clipboard.</li>
-                <li><strong>Share extension:</strong> It receives only text you deliberately share to Kivon from another app and writes it to the local database through the on-device App Group. Nothing passes through our servers.</li>
+                <li><strong>Share extension:</strong> It receives only text, links, images or files you deliberately share to Kivon from another app. Images and files are copied on-device into the app's private attachment directory and kept solely as supplements to the corresponding fragment: they are not indexed for text search and are never uploaded. Share data is passed through the on-device App Group and never through our servers. After sharing, <strong>Kivon does not open or switch you away from the app you were using</strong>; the content is saved locally the next time you open Kivon.</li>
+                <li><strong>Text recognition (OCR):</strong> "Extract text from image" uses the operating system's built-in on-device recognition (iOS Vision / Android ML Kit). Images are <strong>never uploaded</strong> or sent to any third party. The recognised text is appended to the fragment and, as ordinary text, becomes searchable and is included in backups; the image itself still is not.</li>
             </ul>
 
             <h2>5. Backup, Export and Import</h2>
             <ul>
                 <li><strong>Encrypted backup:</strong> You can export an AES-256 encrypted backup whose key is derived from a passphrase you set. The passphrase is <strong>never uploaded or stored</strong>, so a forgotten passphrase makes that backup unrecoverable. Please keep it safe.</li>
                 <li><strong>Plaintext export:</strong> You can export a readable JSON file. It is not encrypted; you decide when to export it and where to keep it.</li>
-                <li><strong>Import / restore:</strong> The app reads only backup files you explicitly select on your device.</li>
+                <li><strong>Import / restore:</strong> The app reads only backup files you explicitly select on your device. You can also choose a backup in WeChat, the Files app or another app and select "Open in Kivon": iOS copies the file into this app's sandbox, it is read or decrypted on-device only after you confirm the import mode, and the copy is deleted once the import finishes. No network access is involved.</li>
+                <li><strong>Attachments are not included in backups:</strong> Both the encrypted backup (.rtx) and the plaintext export (.json) contain text fragments only — <strong>no images or files</strong>. A backup records only how many attachments each fragment originally had, so the app can tell you exactly what will not come back after a restore. Attachments remain on this device unless you manually open them with another app via the system share sheet. This is stated clearly on the export, import, settings and detail screens.</li>
             </ul>
             <p>Once you send any of these files to another app, cloud drive or contact via the system share sheet, that file is governed by the recipient service's own privacy policy. Please choose recipients carefully.</p>
 
             <h2>6. Third-Party Services</h2>
             <ul>
                 <li><strong>Apple App Store / StoreKit:</strong> Used for distribution, updates, and the one-time purchase and restore (see Section 3), subject to Apple's own privacy policy.</li>
-                <li><strong>Hugging Face / hf-mirror.com:</strong> Provides only the public semantic model file download (see Section 2).</li>
+                <li><strong>Open-source semantic model:</strong> multilingual-e5-small is bundled with the app for on-device inference only; the app <strong>does not contact Hugging Face or any model hosting service</strong> at runtime.</li>
             </ul>
             <p>The app does <strong>not</strong> integrate advertising, analytics, crash reporting or user-tracking SDKs, and collects no advertising identifiers.</p>
 
             <h2>7. Data Retention and Deletion</h2>
             <ul>
                 <li>Data exists only on your device and is retained for as long as you decide; we cannot access, export or delete it remotely.</li>
-                <li>You can long-press to delete an individual fragment, or clear your search history in the app.</li>
+                <li>Deleted fragments move to the "Recently deleted" recycle bin for 30 days, where they can be restored together with their attachments. Only after that period are the fragment and its attachment files permanently removed. You can also permanently delete or empty the bin at any time, or clear your search history in the app.</li>
+                <li><strong>App updates:</strong> When upgrading from an older version, the app performs the database structure upgrade and index verification locally, with no network access and no upload of your records. A progress screen is shown during the upgrade, and a confirmation that your existing fragments were preserved appears when it finishes. Please keep the app open while it runs.</li>
                 <li>Uninstalling the app removes your fragments, settings and local database; items in the system keychain are managed by the operating system.</li>
             </ul>
 
